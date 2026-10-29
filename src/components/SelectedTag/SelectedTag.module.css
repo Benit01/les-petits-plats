@@ -1,0 +1,22 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-width: 195px;
+  padding: 1rem 1rem 1rem 1.1rem;
+  border-radius: 10px;
+  background: var(--yellow);
+  font-size: 0.875rem;
+}
+
+.remove {
+  display: flex;
+  border: none;
+  background: none;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
