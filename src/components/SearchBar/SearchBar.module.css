@@ -1,0 +1,77 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 954px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.6rem 0.6rem 2rem;
+  color: var(--black);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: var(--grey);
+}
+
+/* On cache la croix native du champ "search" : on affiche la nôtre */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.clear {
+  display: flex;
+  border: none;
+  background: none;
+  color: var(--grey);
+  padding: 0.25rem;
+}
+
+.clearIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: var(--black);
+  color: var(--white);
+  transition: background 0.2s, color 0.2s;
+}
+
+.submit:hover,
+.submit:focus-visible {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    padding-left: 1rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+}
