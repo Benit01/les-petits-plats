@@ -1,0 +1,88 @@
+.card {
+  background: var(--white);
+  border-radius: 21px;
+  overflow: hidden;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 34px rgba(0, 0, 0, 0.12);
+}
+
+.link {
+  display: block;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 253px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.time {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  padding: 5px 15px;
+  border-radius: 14px;
+  background: var(--yellow);
+  font-size: 0.75rem;
+}
+
+.content {
+  padding: 2rem 1.5rem 3.75rem;
+}
+
+.name {
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-bottom: 1.8rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.9rem;
+}
+
+/* 4 lignes maximum, puis "…" */
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem 1rem;
+}
+
+.ingredients li {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.quantity {
+  font-size: 0.875rem;
+  color: var(--grey);
+}
