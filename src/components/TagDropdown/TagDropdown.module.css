@@ -1,0 +1,145 @@
+.dropdown {
+  position: relative;
+  width: 195px;
+  height: 56px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  padding: 0 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.open .toggle {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.chevron {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s;
+}
+
+.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* La liste s'ouvre par-dessus les cartes */
+.panel {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: var(--white);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding-bottom: 0.75rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 1rem 0.75rem;
+  padding: 0 0.5rem;
+  height: 36px;
+  border: 1px solid #c6c6c6;
+  border-radius: 2px;
+  color: var(--grey);
+}
+
+.filter input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--black);
+}
+
+.iconButton {
+  display: flex;
+  border: none;
+  background: none;
+  color: var(--grey);
+}
+
+.smallIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.tinyIcon {
+  width: 10px;
+  height: 10px;
+}
+
+.selectedList,
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.option,
+.selectedItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.55rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.option:hover,
+.option:focus-visible {
+  background: var(--yellow);
+}
+
+.selectedItem {
+  background: var(--yellow);
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+/* Rond noir avec une croix, visible au survol d'un tag sélectionné */
+.removeDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--yellow);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.selectedItem:hover .removeDot,
+.selectedItem:focus-visible .removeDot {
+  opacity: 1;
+}
+
+.empty {
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  color: var(--grey);
+}
