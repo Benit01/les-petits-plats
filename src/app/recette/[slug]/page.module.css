@@ -1,0 +1,100 @@
+.recipe {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+  gap: 4rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 6rem;
+  background: var(--white);
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 520 / 600;
+  border-radius: 21px;
+  overflow: hidden;
+  align-self: start;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.name {
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.9rem;
+}
+
+.time {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 14px;
+  background: var(--yellow);
+  font-size: 0.875rem;
+}
+
+.servings {
+  font-size: 0.875rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem 1rem;
+}
+
+.grid li {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.item::first-letter {
+  text-transform: uppercase;
+}
+
+.quantity {
+  color: var(--grey);
+  font-size: 0.875rem;
+}
+
+.description {
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .recipe {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
