@@ -1,0 +1,67 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Assombrit la photo pour que le texte reste lisible */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.background {
+  object-fit: cover;
+}
+
+.logo,
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  padding: 2.5rem 4.25rem 0;
+}
+
+.large {
+  min-height: 667px;
+}
+
+.small {
+  min-height: 115px;
+}
+
+/* Page 404 : le bandeau remplit l'écran, footer compris */
+.full {
+  min-height: calc(100vh - 6rem);
+}
+
+.small .logo {
+  padding-top: 2.4rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  .large {
+    min-height: 480px;
+  }
+}
